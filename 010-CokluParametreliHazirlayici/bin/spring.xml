@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+	<bean id="ucgen" class="com.resource.Ucgen">
+	
+<!-- Parametreleri index sırası ile çağırılarbilir -->
+		<constructor-arg index = "2" value="12.2"/>
+		<constructor-arg index = "0" value="Eşkenar"/>
+		<constructor-arg index = "1" value="25"/>
+		
+		
+<!-- 	Tiplerde öncelik sırası String - int - double diye gider.Bu durum arguman ismini vermediğimiz durumlarda ortaya çıkar -->
+<!-- 		<constructor-arg value = "45.6"/>  bu durumda string yazılacak yere sayı yazar. Bu tarz hataların çözümü bir alttaki satırdaki gibi type kullanmaktır-->
+<!-- 		<constructor-arg type="double" value = "45.6"/> -->
+			
+<!-- 	Böylece birden fazla argüman kullanılabilir -->
+<!-- 		<constructor-arg name = "cesit" value = "İkiz kenar"/>  Böylece birden fazla argüman kullanılabilir-->
+<!-- 		<constructor-arg name = "yukseklik" value = "25"/> -->
+<!-- 		<constructor-arg name = "taban" value = "12.2"/> -->
+		
+<!-- 	Burda sıra önemli değil -->
+<!-- 		<constructor-arg name = "yukseklik" value = "25"/> -->
+<!-- 		<constructor-arg name = "cesit" value = "İkiz kenar"/> -->
+		
+		
+		
+<!-- 		<constructor-arg value = "İkiz kenar"/> argüment name belirtmediğim için şimdi sıralama önemli-->
+<!-- 		<constructor-arg value = "25"/>  farklı sıralamada yazsaydım hata verirdi çünkü fonksiyonda argüment sırası ilk çeşit sonra yükseklik şeklinde-->
+
+<!-- 		<property name="yukseklik" value="15"></property> -->
+	</bean>
+</beans>

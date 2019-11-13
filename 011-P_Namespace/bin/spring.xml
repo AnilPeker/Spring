@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
+
+
+	
+<!-- 	<bean id="ogrenci" class="com.resource.Ogrenci"> -->
+<!-- 		<property name="adi" value="Anil"></property> -->
+<!-- 		<property name="numarasi" value="2016129"></property> -->
+<!-- 		<property name="soyadi" value="Peker"></property> -->
+<!-- 	</bean> -->
+
+
+<!-- Bir öğrencinin bilgisi başka bir bean'den gelseydi ref kullanılabilirdi -->
+	<bean id="beanOgrenci" class="com.resource.Ogrenci"
+			p:adi = "Anil"
+			p:numarasi = "2016129"
+			p:soyadi = "Peker"
+			p:universitesi-ref = "beanOkul"/>
+
+	<bean id="beanOkul" class="com.resource.Okul"
+			p:kurumAdi = "ODTU"/>
+
+</beans>

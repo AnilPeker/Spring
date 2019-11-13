@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:c="http://www.springframework.org/schema/c"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
+	
+	
+
+
+	
+	<bean id="beanOgrenci" class="com.resource.Ogrenci">
+		<property name="ogrenciList">
+			<list>
+				<value>Anil</value>
+				<value>Tugce</value>
+			</list>
+		</property>
+		<property name="ogrenciSet">
+			<set>
+				<value>Nuray</value>
+				<value>Gunes</value>
+			</set>
+		</property>
+		<property name="ogrenciMap">
+			<map>
+				<entry key="1" value="Hasan"></entry>
+				<entry key="2" value="Gurbuz"></entry>
+			</map>
+		</property>
+		<property name="ogrenciProperties">
+			<props>
+				<prop key="Erkek">Kategori1</prop>
+				<prop key="Kadın">Kategori2</prop>
+			</props>
+		</property>
+	</bean>
+</beans>

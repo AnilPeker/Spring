@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:c="http://www.springframework.org/schema/c"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd
+		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-4.3.xsd">
+	
+	
+
+	<bean id="beanPersonel" class="com.resource.Personel">
+		<property name="list">
+			<util:list list-class="java.util.ArrayList">
+				<value>Tugce</value>
+				<value>Anıl</value>
+				<value>Anılcan</value>
+			</util:list>
+		</property>
+		<property name="map">
+			<util:map map-class="java.util.HashMap">
+				<entry key="1" value="Tugce"></entry>
+				<entry key="2" value="Anılcan"></entry>
+				<entry key="3" value="Anıl"></entry>
+			</util:map>
+		</property>
+		<property name="set">
+			<util:set set-class="java.util.TreeSet">
+				<value>Tugce</value>
+				<value>Anıl</value>
+				<value>Anılcan</value>
+			</util:set>
+		</property>
+		
+	</bean>
+</beans>

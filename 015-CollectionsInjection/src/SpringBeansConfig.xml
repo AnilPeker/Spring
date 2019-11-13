@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:c="http://www.springframework.org/schema/c"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
+	
+	
+
+
+	
+	<bean id="beanOgrenci" class="com.resource.Ogrenci">
+		<property name="adi" value="Tugce"></property>
+		<property name="soyadi" value="Zaferler"></property>
+		<property name="bolumu" value="Business Administration"></property>
+		<property name="yasi" value="24"></property>
+	</bean>
+	
+	<bean id="beanCollecitons" class="com.resource.Collections">
+		<property name="ogrenciList">
+			<list>
+				<ref bean="beanOgrenci"/>
+				<bean class="com.resource.Ogrenci">
+					<property name="adi" value="Anıl"></property>
+					<property name="soyadi" value="Peker"></property>
+					<property name="bolumu" value="Computer Engineering"></property>
+					<property name="yasi" value="24"></property>
+				</bean>
+			</list>
+		</property>
+		<property name="ogrenciMap">
+			<map>
+				<entry key="Spring" value-ref="beanOgrenci"></entry>
+				<entry key="Hibernate">
+					<bean class="com.resource.Ogrenci">
+						<property name="adi" value="Anıl"></property>
+						<property name="soyadi" value="Peker"></property>
+						<property name="bolumu" value="Computer Engineering"></property>
+						<property name="yasi" value="24"></property>
+					</bean>
+				</entry>
+			</map>
+		</property>
+		<property name="ogrenciProperties">
+			<props>
+				<prop key="WS">Anılcan Yuce</prop>
+			</props>
+		</property>
+		<property name="ogrenciSet">
+			<set>
+				<ref bean="beanOgrenci"/>
+				<bean class="com.resource.Ogrenci">
+					<property name="adi" value="Anıl"></property>
+					<property name="soyadi" value="Peker"></property>
+					<property name="bolumu" value="Computer Engineering"></property>
+					<property name="yasi" value="24"></property>
+				</bean>
+			</set>
+		</property>
+	</bean>
+</beans>
