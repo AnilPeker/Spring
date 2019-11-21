@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:c="http://www.springframework.org/schema/c"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
+	
+	
+	<bean id="beanSelam" class="com.resource.Selam" >
+		<property name="mesaj1" value="Anıl Peker"/>
+		<property name="mesaj2" value="Başak Peker"/>
+	</bean>
+	
+	
+
+	<bean id="beanYazar" class="com.resource.Yazar" parent="beanSelam">
+		<property name="mesaj1" value="Tuğçe Zaferler"/>
+		<property name="mesaj3" value="Anilcan Yuce"/>
+	</bean>
+</beans>
