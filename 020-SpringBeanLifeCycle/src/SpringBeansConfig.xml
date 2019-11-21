@@ -11,7 +11,7 @@
 	
 	
 	<bean id="beanSelam1" class="com.resource.Selam" 
-		scope="singleton"
+		scope="prototype"
 		init-method="init"
 		destroy-method="destroy"
 	/>
