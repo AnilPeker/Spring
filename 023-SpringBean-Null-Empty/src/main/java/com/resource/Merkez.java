@@ -9,9 +9,9 @@ public class Merkez {
 		@SuppressWarnings("resource")
 		ApplicationContext context = new ClassPathXmlApplicationContext("SpringBeansConfig.xml");
 
-		B bNesnesi = context.getBean("beanB", B.class);
+		Personel personel = context.getBean("beanPersonel", Personel.class);
 
-		bNesnesi.sonucuGoster();
+		System.out.println(personel);
 
 	}
 

@@ -3,15 +3,34 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans 
 	http://www.springframework.org/schema/beans/spring-beans-4.2.xsd">
-
-
-	<bean id="beanA" class="com.resource.A"></bean>
-	
-	<bean id="beanB" class="com.resource.B" lazy-init="true" scope="singleton">
-		<constructor-arg ref="beanA" ></constructor-arg>
 	
 	
+	
+	
+	<bean id="beanPersonel" class="com.resource.Personel">
+		<property name="adi" value="Anıl"/>
+		<property name="soyadi">
+			<value type="java.lang.String">Peker</value>
+		</property>
+		
+		<property name="anneAdi" value=""/>
+		
+		
+		<property name="babaAdi">
+			<value/>
+		</property>
+		
+		<property name="adres"><value/></property>
+		
+		
+		<property name="ehliyet" value="true"/>
+		<property name="maasi" value="5000"/>
+		<property name="medeniHali" value="true"/>
+		<property name="telNo">
+			<null></null>
+		</property>
+		<property name="dogumYili">
+			<value>1995</value>
+		</property>
 	</bean>
-	
-	
 </beans>
