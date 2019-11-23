@@ -11,6 +11,7 @@ import org.springframework.core.io.Resource;
 @SuppressWarnings({ "deprecation", "unused" })
 public class Cizim {
 
+	@SuppressWarnings("resource")
 	public static void main(String[] args) {
 		//Resource resource = new FileSystemResource("spring.xml");     // Yakýn yerler ve performans için 
 		//XmlBeanFactory xmlBeanFactory = new XmlBeanFactory(resource);

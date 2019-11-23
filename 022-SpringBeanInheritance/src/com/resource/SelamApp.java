@@ -6,6 +6,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 @SuppressWarnings("resource")
 public class SelamApp {
 
+	@SuppressWarnings("unused")
 	public static void main(String[] args) {
 		ApplicationContext context = new ClassPathXmlApplicationContext("SpringBeansConfig.xml");
 		

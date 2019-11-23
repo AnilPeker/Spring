@@ -4,6 +4,7 @@ import org.springframework.beans.factory.BeanFactory;
 import org.springframework.beans.factory.xml.XmlBeanFactory;
 import org.springframework.core.io.FileSystemResource;
 
+@SuppressWarnings("deprecation")
 public class Appcalistir {
 
 	public static void main(String[] args) {

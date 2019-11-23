@@ -18,10 +18,12 @@ public class Cizim {
 		//ClassPathResource classPathResource = new ClassPathResource("spring.xml");//Uzaktaki yerler için 
 		//BeanFactory beanFactory =  new XmlBeanFactory(classPathResource);
 		
+		@SuppressWarnings("resource")
 		ApplicationContext context = new ClassPathXmlApplicationContext(new String[] {"spring.xml"}); // birden fazla xml den bean çekilecekse string i virgül ile çoðaltabiliriz.
 		BeanFactory beanFactory =  context;
 		Ucgen ucgen = (Ucgen) beanFactory.getBean("ucgen");
 		ucgen.ciz();
+		
 	}
 
 }
